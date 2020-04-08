@@ -34,25 +34,25 @@ class AStar(BaseAlgorithm):
         closed_list = set()
 
         # start A* searching
-        while not open_list.isempty() and self.run: 
-            
+        while not open_list.isempty() and self.run:
+
             # get the current node
             current_node = open_list.front()
             current_index = 0
 
             # show sleep
-            if show: 
+            if show:
                 sleep(0.03)
 
             # iterate over open list elements
             current_node, current_index = open_list.lowest_cost(current_node)
-        
+
             # pop current from open list, add to closed list
             open_list.remove(current_index)
             closed_list.add(current_node)
 
             # found the goal
-            if current_node.state == self.target: 
+            if current_node.state == self.target:
                 # recolor start and target
                 self.set_value(self.target, 5)
                 self.set_value(self.start, 5)
@@ -68,7 +68,7 @@ class AStar(BaseAlgorithm):
                     self.set_value(current_node.state, 4)
                     # show sleep
                     if show:
-                        sleep(0.05)
+                        sleep(0.03)
                     # move to the next parent
                     current_node = current_node.parent
                 # reverse the solution
@@ -79,18 +79,20 @@ class AStar(BaseAlgorithm):
                 return solution
 
             # search for neighors
-            for neighbor in self.get_neighbors(current_node.state): 
+            for neighbor in self.get_neighbors(current_node.state):
                 # skip neighbor in the closed list
-                if neighbor in [i.state for i in closed_list]: 
+                if neighbor in [i.state for i in closed_list]:
                     continue
                 # create new node
                 node = ASNode(state=neighbor, parent=current_node)
                 # calculate f, g, h values
                 node.g = current_node.g + 1
-                node.h = ((neighbor[0] - self.target[0])**2) + ((neighbor[1] - self.target[1])**2)
-                node.f = node.g + node.h 
+                node.h = ((neighbor[0] - self.target[0]) ** 2) + (
+                    (neighbor[1] - self.target[1]) ** 2
+                )
+                node.f = node.g + node.h
                 # check if the node already in the open list
-                if open_list.isexist(node.state, node.g): 
+                if open_list.isexist(node.state, node.g):
                     continue
                 # mark as explored
                 self.set_value(node.state, 3)

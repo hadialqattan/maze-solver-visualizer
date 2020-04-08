@@ -1,7 +1,7 @@
 from collections import deque
 
 
-class Node: 
+class Node:
 
     """
     Node implementation for(BFS-DFS).
@@ -17,28 +17,28 @@ class Node:
         self.parent = parent
 
 
-class ASNode(Node): 
-    
+class ASNode(Node):
+
     """
     A* Node implementation for(A*)
 
     child :: (Node)
     """
 
-    def __init__(self, *args, **kwargs): 
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.g = 0
         self.h = 0
         self.f = 0
 
 
-class Stack: 
-     
+class Stack:
+
     """
     Stack implementation.
     """
-    
-    def __init__(self): 
+
+    def __init__(self):
         self.list = deque([])
 
     def add(self, node: Node):
@@ -50,7 +50,7 @@ class Stack:
         """
         self.list.append(node)
 
-    def remove(self) -> Node: 
+    def remove(self) -> Node:
         """
         Remove and return element from list.
 
@@ -59,7 +59,7 @@ class Stack:
         """
         return self.list.pop()
 
-    def isempty(self) -> bool: 
+    def isempty(self) -> bool:
         """
         Is the list empty?
 
@@ -68,7 +68,7 @@ class Stack:
         """
         return len(self.list) == 0
 
-    def isexist(self, state: int) -> bool: 
+    def isexist(self, state: int) -> bool:
         """
         Is the state exist on the list?
 
@@ -80,7 +80,7 @@ class Stack:
         return any(node.state == state for node in self.list)
 
 
-class Queue(Stack): 
+class Queue(Stack):
 
     """
     Queue implementation.
@@ -88,7 +88,7 @@ class Queue(Stack):
     child :: (Stack)
     """
 
-    def remove(self) -> Node: 
+    def remove(self) -> Node:
         """
         Remove and return element from list.
 
@@ -98,13 +98,13 @@ class Queue(Stack):
         return self.list.popleft()
 
 
-class OpenList: 
-    
+class OpenList:
+
     """
     A* open list implementation.
     """
 
-    def __init__(self): 
+    def __init__(self):
         self.list = []
 
     def lowest_cost(self, node: ASNode) -> tuple:
@@ -117,9 +117,9 @@ class OpenList:
         """
         currentindex = 0
         # iterate over open list elements
-        for index, lnode in enumerate(self.list): 
+        for index, lnode in enumerate(self.list):
             # get lower cost node
-            if lnode.f < node.f: 
+            if lnode.f < node.f:
                 node = lnode
                 currentindex = index
         return node, currentindex
@@ -133,7 +133,7 @@ class OpenList:
         """
         self.list.append(node)
 
-    def front(self) -> ASNode: 
+    def front(self) -> ASNode:
         """
         Return list front element.
 
@@ -151,7 +151,7 @@ class OpenList:
         """
         self.list.pop(index)
 
-    def isempty(self) -> bool: 
+    def isempty(self) -> bool:
         """
         Is the list empty?
 
@@ -160,7 +160,7 @@ class OpenList:
         """
         return len(self.list) == 0
 
-    def isexist(self, state: int, g: int) -> bool: 
+    def isexist(self, state: int, g: int) -> bool:
         """
         Is the state exist on the list?
 

@@ -1,5 +1,3 @@
-
-
 class BaseAlgorithm:
 
     """
@@ -21,7 +19,7 @@ class BaseAlgorithm:
         self.__target = target
 
     @property
-    def start(self) -> tuple: 
+    def start(self) -> tuple:
         """
         start property getter.
 
@@ -29,9 +27,9 @@ class BaseAlgorithm:
         :rtype: tuple
         """
         return tuple(self.__start)
-    
+
     @property
-    def target(self) -> tuple: 
+    def target(self) -> tuple:
         """
         target property getter.
 
@@ -84,13 +82,15 @@ class BaseAlgorithm:
         )
         # get neighbors
         neighbors = []
-        for x, y in subs: 
+        for x, y in subs:
             # calculate neghbor position
-            nx, ny = statepos[0] + x, statepos[1] + y 
+            nx, ny = statepos[0] + x, statepos[1] + y
             # check if the neghbor in grid length range
-            if (-1 < nx < self.grid_len 
-                and -1 < ny < self.grid_len 
-                and self.grid[nx][ny] != 1): 
+            if (
+                -1 < nx < self.grid_len
+                and -1 < ny < self.grid_len
+                and self.grid[nx][ny] != 1
+            ):
                 # append the neighbor
                 neighbors.append((nx, ny))
         return neighbors

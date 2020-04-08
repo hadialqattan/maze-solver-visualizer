@@ -1,7 +1,7 @@
-import pygame 
+import pygame
 
 
-class Grid: 
+class Grid:
 
     """
     maze solver GUI grid implementation.
@@ -16,22 +16,20 @@ class Grid:
 
     def __init__(self, size: tuple, screen: pygame.Surface, BLOCKSIZE: int):
         self.__size = size
-        self.__screen = screen 
+        self.__screen = screen
         self.BLOCKSIZE = BLOCKSIZE
         # get row/column square count
         self.n = self.__size[0] // self.BLOCKSIZE
         # init the grid (empty grid)
-        self.grid = [
-            [0 for i in range(self.n)] for j in range(self.n)
-        ]
-        # set start / target 
+        self.grid = [[0 for i in range(self.n)] for j in range(self.n)]
+        # set start / target
         self.__start = [1, 1]
-        self.__target = [self.n-2, self.n-2]
+        self.__target = [self.n - 2, self.n - 2]
         self.grid[1][1] = 2
-        self.grid[self.n-2][self.n-2] = 2
+        self.grid[self.n - 2][self.n - 2] = 2
 
     @property
-    def _start(self) -> list: 
+    def _start(self) -> list:
         """
         start property getter.
 
@@ -41,7 +39,7 @@ class Grid:
         return self.__start
 
     @property
-    def start(self) -> tuple: 
+    def start(self) -> tuple:
         """
         start property getter.
 
@@ -51,7 +49,7 @@ class Grid:
         return tuple(self.__start)
 
     @start.setter
-    def start(self, position: tuple): 
+    def start(self, position: tuple):
         """
         start property setter.
 
@@ -62,7 +60,7 @@ class Grid:
         self.__start[1] = position[1]
 
     @property
-    def _target(self) -> list: 
+    def _target(self) -> list:
         """
         target property getter.
 
@@ -72,7 +70,7 @@ class Grid:
         return self.__target
 
     @property
-    def target(self) -> tuple: 
+    def target(self) -> tuple:
         """
         target property getter.
 
@@ -80,9 +78,9 @@ class Grid:
         :rtype: tuple
         """
         return tuple(self.__target)
-    
-    @target.setter 
-    def target(self, position: tuple): 
+
+    @target.setter
+    def target(self, position: tuple):
         """
         target property setter
 
@@ -92,29 +90,29 @@ class Grid:
         self.__target[0] = position[0]
         self.__target[1] = position[1]
 
-    def reset(self, _all: bool): 
+    def reset(self, _all: bool):
         """
         Reset the grid.
 
         :param _all: set all to reset the entire grid
         :type _all: bool
         """
-        if _all: 
+        if _all:
             # reset the grid (empty grid)
-            for x in range(self.n): 
-                for y in range(self.n): 
-                    self.grid[x][y] = 0
-        else: 
-            # reset only non-wall block
-            for x in range(self.n): 
+            for x in range(self.n):
                 for y in range(self.n):
-                    if self.grid[x][y] != 1: 
+                    self.grid[x][y] = 0
+        else:
+            # reset only non-wall block
+            for x in range(self.n):
+                for y in range(self.n):
+                    if self.grid[x][y] != 1:
                         self.grid[x][y] = 0
         # relocate start and target
         self.set_value(self.start, 2)
         self.set_value(self.target, 2)
 
-    def draw(self, theme: bool, grid_stroke: bool): 
+    def draw(self, theme: bool, grid_stroke: bool):
         """
         Draw the grid.
 
@@ -127,34 +125,39 @@ class Grid:
         if theme:
             fill = (255, 255, 255)
             stroke = (200, 200, 200)
-        else: 
+        else:
             fill = (55, 55, 55)
             stroke = (0, 0, 0)
         # iterate over all rows
-        for x in range(self.n): 
+        for x in range(self.n):
             # iterate over all columns
-            for y in range(self.n): 
+            for y in range(self.n):
                 # create rect
-                rect = pygame.Rect(x*self.BLOCKSIZE, y*self.BLOCKSIZE, self.BLOCKSIZE, self.BLOCKSIZE)
+                rect = pygame.Rect(
+                    x * self.BLOCKSIZE,
+                    y * self.BLOCKSIZE,
+                    self.BLOCKSIZE,
+                    self.BLOCKSIZE,
+                )
                 if grid_stroke:
                     # draw rect (stroke)
                     pygame.draw.rect(self.__screen, stroke, rect, 1)
-                if self.grid[x][y] == 1: 
+                if self.grid[x][y] == 1:
                     # draw rect (fill)(wall)
                     pygame.draw.rect(self.__screen, fill, rect)
                 elif self.grid[x][y] == 2:
                     # draw rect (fill)(start-target)
                     pygame.draw.rect(self.__screen, (51, 51, 204), rect)
-                elif self.grid[x][y] == 3: 
+                elif self.grid[x][y] == 3:
                     # draw rect (fill)(explored & frontiered)
                     pygame.draw.rect(self.__screen, (51, 204, 51), rect)
-                elif self.grid[x][y] == 4: 
+                elif self.grid[x][y] == 4:
                     # shortest path member
                     pygame.draw.rect(self.__screen, (51, 51, 204), rect)
                 elif self.grid[x][y] == 5:
                     # found target
                     pygame.draw.rect(self.__screen, (204, 51, 51), rect)
-    
+
     def set_value(self, pos: tuple, value: int):
         """
         Set block value by position. 

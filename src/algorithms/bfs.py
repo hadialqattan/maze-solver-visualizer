@@ -33,8 +33,8 @@ class BFS(BaseAlgorithm):
         explored = set()
 
         # start BFS
-        while not frontier.isempty() and self.run: 
-            
+        while not frontier.isempty() and self.run:
+
             # dequeue node from frontier
             node = frontier.remove()
 
@@ -45,7 +45,7 @@ class BFS(BaseAlgorithm):
                 sleep(0.03)
 
             # check if the node state equals target
-            if node.state == self.target: 
+            if node.state == self.target:
                 # recolor start and target
                 self.set_value(self.target, 5)
                 self.set_value(self.start, 5)
@@ -60,8 +60,8 @@ class BFS(BaseAlgorithm):
                     # mark solution path
                     self.set_value(node.state, 4)
                     # show sleep
-                    if show: 
-                        sleep(0.05)
+                    if show:
+                        sleep(0.03)
                     # move to the next parent
                     node = node.parent
                 # reverse the solution
@@ -75,19 +75,16 @@ class BFS(BaseAlgorithm):
             explored.add(node)
 
             # search for neighbors
-            for neighbor in self.get_neighbors(node.state): 
+            for neighbor in self.get_neighbors(node.state):
                 # check if the neighbor not in frontier and not explored
-                if not frontier.isexist(neighbor) and neighbor not in [i.state for i in explored]: 
+                if not frontier.isexist(neighbor) and neighbor not in [
+                    i.state for i in explored
+                ]:
                     # add the node to the frontier
-                    frontier.add(
-                        Node(
-                            state=neighbor, 
-                            parent=node
-                        )
-                    )
+                    frontier.add(Node(state=neighbor, parent=node))
 
         # no solution
         # distance report
-        if frontier.isempty(): 
+        if frontier.isempty():
             report.show_report(0)
         return None

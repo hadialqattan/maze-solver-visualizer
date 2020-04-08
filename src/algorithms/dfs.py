@@ -2,7 +2,7 @@ from time import sleep
 
 # local import
 from src.algorithms.base import BaseAlgorithm
-from src.datastructures.datastructure import Stack, Node 
+from src.datastructures.datastructure import Stack, Node
 from src.gui.dialog import ConfigurationDialog as report
 
 
@@ -33,19 +33,19 @@ class DFS(BaseAlgorithm):
         explored = set()
 
         # start DFS
-        while not frontier.isempty() and self.run: 
-        
+        while not frontier.isempty() and self.run:
+
             # dequeue node from frontier
             node = frontier.remove()
 
             # mark as explored
             self.set_value(node.state, 3)
             # show sleep
-            if show: 
+            if show:
                 sleep(0.03)
 
             # check if the node state equals target
-            if node.state == self.target: 
+            if node.state == self.target:
                 # recolor start and target
                 self.set_value(self.target, 5)
                 self.set_value(self.start, 5)
@@ -60,8 +60,8 @@ class DFS(BaseAlgorithm):
                     # mark solution path
                     self.set_value(node.state, 4)
                     # show sleep
-                    if show: 
-                        sleep(0.05)
+                    if show:
+                        sleep(0.03)
                     # move to the next parent
                     node = node.parent
                 # reverse the solution
@@ -75,19 +75,16 @@ class DFS(BaseAlgorithm):
             explored.add(node)
 
             # search for neighbors
-            for neighbor in self.get_neighbors(node.state): 
+            for neighbor in self.get_neighbors(node.state):
                 # check if the neighbor not in frontier and not explored
-                if not frontier.isexist(neighbor) and neighbor not in [i.state for i in explored]: 
+                if not frontier.isexist(neighbor) and neighbor not in [
+                    i.state for i in explored
+                ]:
                     # add the node to the frontier
-                    frontier.add(
-                        Node(
-                            state=neighbor, 
-                            parent=node
-                        )
-                    )
+                    frontier.add(Node(state=neighbor, parent=node))
 
         # no solution
         # distance report
-        if frontier.isempty(): 
+        if frontier.isempty():
             report.show_report(0)
         return None
