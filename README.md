@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> Maze solver visualizer, solving with A*, BFS, DFS algorithms include steps show and distance report.
+> Maze solver visualizer, solving with A*, BFS and DFS algorithms visually including steps show and distance report.
 
 # Algorithms
 
@@ -309,6 +309,7 @@ This article uses material from the Wikipedia article
 <details>
     <summary> Reset </summary>
 
+## Shortcuts
 
 |Shortcut|Description|
 |:---:|:---:|
