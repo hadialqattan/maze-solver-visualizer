@@ -224,32 +224,8 @@ This article uses material from the Wikipedia article
 
 </details>
 
-# Demo 🧮
+# Usage 🗝
 
-<details>
-    <summary> General records </summary>
-
-## A* algorithm (show steps -> enabled)
-
-![a* algorithm](./docs/gif/full_astar.gif)
-
-## Change the theme and hide the grid
-
-![change the theme and hide the grid](./docs/gif/astar_change_theme.gif)
-
-## All algorithms (show steps -> enabled)
-
-![All algorithms](./docs/gif/all-nogrid.gif)
-
-## All algorithms (onlty A* show steps -> enabled)
-
-![All algorithms without show steps](./docs/gif/all-nogrid-erase.gif)
-
-## BFS algorithm (show steps -> enabled)
-
-![BFS algorithm](./docs/gif/dark-bfs.gif)
-
-</details>
 
 <details>
     <summary> Moving start / target position </summary>
@@ -280,7 +256,8 @@ This article uses material from the Wikipedia article
 </details>
 
 <details>
-    <summary> Configuration dialog and distance report </summary>
+    <summary> Configuration dialog and distance report (solver triggering)
+    </summary>
 
 ## Shortcuts
 
@@ -359,8 +336,35 @@ This article uses material from the Wikipedia article
 
 </details>
 
-# Usage 🗝
-### There are two ways to use this project:
+# Demo 🧮
+
+<details>
+    <summary> General records </summary>
+
+## A* algorithm (show steps -> enabled)
+
+![a* algorithm](./docs/gif/full_astar.gif)
+
+## Change the theme and hide the grid
+
+![change the theme and hide the grid](./docs/gif/astar_change_theme.gif)
+
+## All algorithms (show steps -> enabled)
+
+![All algorithms](./docs/gif/all-nogrid.gif)
+
+## All algorithms (onlty A* show steps -> enabled)
+
+![All algorithms without show steps](./docs/gif/all-nogrid-erase.gif)
+
+## BFS algorithm (show steps -> enabled)
+
+![BFS algorithm](./docs/gif/dark-bfs.gif)
+
+</details>
+
+# Installation 🔩
+### There are two ways to install this project:
 * Without any prerequisites (Windows OS) :
     
     <details>
