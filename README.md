@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> Maze solver visualizer, solving with A*, BFS and DFS algorithms visually including steps show and distance report.
+> Maze solver visualizer, solving mazes using A*, BFS and DFS algorithms visually with steps show and distance report.
 
 # Algorithms
 
