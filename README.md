@@ -2,7 +2,7 @@
 <p>
   <a href="https://github.com/hadizakialqattan/maze-solver-visualizer/actions?query=workflow%3ACI"><img alt="CI" src="https://github.com/hadizakialqattan/maze-solver-visualizer/workflows/CI/badge.svg?branch=master"/>
   </a>
-  <a href="https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hadizakialqattan/maze-solver-visualizer&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/4245e1fca0494630bd3ba1f0181a8398"/></a>
+  <a href="https://www.codacy.com/manual/HadiZakiAlQattan/maze-solver-visualizer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hadizakialqattan/maze-solver-visualizer&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/8c51a73ef9464ad09c7e70d4a2cc9452"/></a>
   <a href="https://www.python.org/"><img alt="Python version: 3.x" src="https://img.shields.io/badge/python-python%203.x-blue.svg">
   </a>
   <a href="https://docutils.sourceforge.io/rst.html"><img alt="Docstrings: reStructuredText" src="https://img.shields.io/badge/docstrings-reStructuredText-gree.svg">
