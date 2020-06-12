@@ -1,15 +1,15 @@
 <h1 align="center">Welcome to Maze Solver Visualizer 👋</h1>
 <p>
-  <a href="https://github.com/HadiZakiAlQattan/maze-solver-visualizer/actions?query=workflow%3ACI"><img alt="CI" src="https://github.com/HadiZakiAlQattan/maze-solver-visualizer/workflows/CI/badge.svg?branch=master"/>
+  <a href="https://github.com/hadizakialqattan/maze-solver-visualizer/actions?query=workflow%3ACI"><img alt="CI" src="https://github.com/hadizakialqattan/maze-solver-visualizer/workflows/CI/badge.svg?branch=master"/>
   </a>
-  <a href="https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=HadiZakiAlQattan/maze-solver-visualizer&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/4245e1fca0494630bd3ba1f0181a8398"/></a>
+  <a href="https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hadizakialqattan/maze-solver-visualizer&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/4245e1fca0494630bd3ba1f0181a8398"/></a>
   <a href="https://www.python.org/"><img alt="Python version: 3.x" src="https://img.shields.io/badge/python-python%203.x-blue.svg">
   </a>
   <a href="https://docutils.sourceforge.io/rst.html"><img alt="Docstrings: reStructuredText" src="https://img.shields.io/badge/docstrings-reStructuredText-gree.svg">
   </a>
   <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg">
   </a>
-  <a href="https://github.com/HadiZakiAlQattan/maze-solver-visualizer/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/hadizakialqattan/maze-solver-visualizer/blob/master/LICENSE" target="_blank">
     <img alt="License: GPLv3" src="https://img.shields.io/badge/License-GPLv3-blue.svg" />
   </a>
 </p>
@@ -20,7 +20,7 @@
 
 <details>
 <summary> 
-<a href="https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/src/algorithms/a_star.py">A*</a>
+<a href="https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/src/algorithms/a_star.py">A*</a>
 </summary>
 
 <h1 lang="en">A* search algorithm</h1>
@@ -121,7 +121,7 @@ This article uses material from the Wikipedia article
 
 <details>
 <summary> 
-<a href="https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/src/algorithms/bfs.py">BFS</a>
+<a href="https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/src/algorithms/bfs.py">BFS</a>
 </summary>
 
 <h1 lang="en">Breadth-first search</h1>
@@ -164,7 +164,7 @@ This article uses material from the Wikipedia article
 
 <details>
 <summary> 
-<a href="https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/src/algorithms/dfs.py">DFS</a>
+<a href="https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/src/algorithms/dfs.py">DFS</a>
 </summary>
 
 <h1 lang="en">Depth-first search</h1>
@@ -370,8 +370,8 @@ This article uses material from the Wikipedia article
     <details>
     <summary> show instructions </summary>
 
-    + download whole [executable directory](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/executable)
-    + run [executable/maze_solver_visualizer.exe](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/executable/exe/maze_solver_visualizer.exe)
+    + download whole [executable directory](https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/executable)
+    + run [executable/maze_solver_visualizer.exe](https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/executable/exe/maze_solver_visualizer.exe)
     </details>
 
 * With prerequisites (Unix-based OS) : 
@@ -381,16 +381,16 @@ This article uses material from the Wikipedia article
 
     + clone this repo : 
         ```shell 
-        $ git clone https://github.com/HadiZakiAlQattan/maze-solver-visualizer.git
+        $ git clone https://github.com/hadizakialqattan/maze-solver-visualizer.git
         ```
     + Install prerequisites :
         * [Python 3.x](https://www.python.org/downloads/)
-        * Python libraries from [requirements.txt](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/blob/master/requirements.txt)
+        * Python libraries from [requirements.txt](https://github.com/hadizakialqattan/maze-solver-visualizer/blob/master/requirements.txt)
             ```shell 
             $ sudo pip3 install -r requirements.txt
             ```
 
-    + Run [run.sh](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/blob/master/run.sh) : 
+    + Run [run.sh](https://github.com/hadizakialqattan/maze-solver-visualizer/blob/master/run.sh) : 
         ```shell
         $ ./run.sh
         ```
@@ -398,9 +398,9 @@ This article uses material from the Wikipedia article
 
 # Tests 🧪
 
-### Unit tests @ [tests directory](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/tests) includes tests only for :
-* [Datastructures](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/src/datastructures)
-* [Algorithms](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/tree/master/src/algorithms)
+### Unit tests @ [tests directory](https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/tests) includes tests only for :
+* [Datastructures](https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/src/datastructures)
+* [Algorithms](https://github.com/hadizakialqattan/maze-solver-visualizer/tree/master/src/algorithms)
 
 ### Run command :
 ``` shell
@@ -409,15 +409,15 @@ $ ./run.sh tests
 
 # Copyright ©
 
-👤 **Hadi Zaki AlQattan**
+👤 **Hadi Zaki Alqattan**
 
-* Github: [@HadiZakiAlQattan](https://github.com/HadiZakiAlQattan)
+* Github: [@hadizakialqattan](https://github.com/hadizakialqattan)
 * Email: <alqattanhadizaki@gmail.com>
 
 📝 **License**
 
-Copyright © 2020 [Hadi Zaki AlQattan](https://github.com/HadiZakiAlQattan).<br />
-This project is [GPLv3](https://github.com/HadiZakiAlQattan/maze-solver-visualizer/blob/master/LICENSE) licensed.
+Copyright © 2020 [Hadi Zaki Alqattan](https://github.com/hadizakialqattan).<br />
+This project is [GPLv3](https://github.com/hadizakialqattan/maze-solver-visualizer/blob/master/LICENSE) licensed.
 
 ***
 Give a ⭐️ if this project helped you!
