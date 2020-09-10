@@ -169,7 +169,7 @@ class GUI:
         """
         Move start / target position.
 
-        :param start: set True if start position 
+        :param start: set True if start position
         :type start: bool
         """
         # get current position

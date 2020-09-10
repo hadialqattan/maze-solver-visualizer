@@ -56,7 +56,7 @@ class BaseAlgorithm:
         :returns: list of all state neighbors [(x, y)]
         :rtype: list
 
-        Actions map : 
+        Actions map :
 
             # up neighbors
             (-1, -1), (-1, 0), (-1, +1)
@@ -97,7 +97,7 @@ class BaseAlgorithm:
 
     def set_value(self, pos: tuple, value: int):
         """
-        Set block value by position. 
+        Set block value by position.
 
         :param pos: block position (x, y)
         :type pos: tuple

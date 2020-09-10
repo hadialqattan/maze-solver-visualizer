@@ -84,7 +84,7 @@ class Queue(Stack):
 
     """
     Queue implementation.
-    
+
     child :: (Stack)
     """
 

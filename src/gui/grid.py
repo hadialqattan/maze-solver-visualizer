@@ -53,7 +53,7 @@ class Grid:
         """
         start property setter.
 
-        :param position: new start position 
+        :param position: new start position
         :type position: tuple
         """
         self.__start[0] = position[0]
@@ -160,7 +160,7 @@ class Grid:
 
     def set_value(self, pos: tuple, value: int):
         """
-        Set block value by position. 
+        Set block value by position.
 
         :param pos: block position (x, y)
         :type pos: tuple

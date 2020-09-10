@@ -34,7 +34,7 @@ class Threads:
 
     def join_by_id(self, _id: int):
         """
-        Join thread by id. 
+        Join thread by id.
 
         :param _id: thread id
         :type _id: int
@@ -49,7 +49,7 @@ class Threads:
             exit(1)
 
     def join_all(self):
-        """ 
+        """
         Join all threads.
         """
         try:
